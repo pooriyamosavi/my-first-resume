@@ -1,0 +1,236 @@
+$bgColor : rgb(235, 235, 235);
+body{
+    margin: 0;
+    background-color: $bgColor;
+    font-family: yakan;
+    direction: rtl;
+}
+@font-face {
+    font-family: yakan;
+    src: url("./yekan-web/yekan.ttf"); 
+    src: url("./yekan-web/yekan.eot");
+}
+.nav{
+    img{
+        height: 80px;
+        width: 80px;
+    }
+    .button{
+        color: black !important;
+    }
+    .button:hover{
+        color: white !important;
+    }
+}
+.hero{
+    background: url("https://static.delino.com/Image/Restaurant/Cover/dwmuvim2.w4d_big.jpg");
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    .cover{
+        height: 300px;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+    }
+    h5{
+        margin: 120px 24px 0 0;
+    }
+}
+.Dbtn{
+    .navbtn{
+        background-color: $bgColor;
+        border-radius: 5px 5px 0 0;
+    }
+    .active{
+        background-color: white;
+        border: 1px solid lightgrey !important;
+        border-bottom: none !important;
+        padding-top: 15px !important;
+        padding-bottom: 16px !important;
+    }
+}
+.body{
+    .shop{
+        width: 68%;
+    }
+    .cartbody{
+        width: 32%;
+        .cart{
+            border: 1px solid lightgrey;
+            max-width: 350px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 15px;
+            min-height: 250px;
+            h5{
+                color: grey;
+            }
+        }
+    }
+}
+.navmenu{
+    background-color: white;
+    height: 100px;
+    margin: 11px 48px 0 0;
+    border: 1px solid lightgrey;
+    z-index: 2;
+    .scrollbtn{
+        width: 49px;
+        color: darkgrey;
+    }
+    .scrollbtn:hover{
+        color: black;
+    }
+    .navbtn{
+        width: calc(100% - (2 * 49px));
+        height: 100px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    
+}
+.NavMenuItem{
+    margin-inline: 33px;
+    width: 40px;
+    img{
+        height: 40px;
+        width: 40px;
+    }
+}
+.filter{
+    border: 1px solid lightgrey;
+    border-top:none;
+    border-bottom-style: dashed;
+    margin-right: 48px;
+    #search{
+        border: 1px solid grey;
+        border-right: none;
+        border-radius: 3px 0 0 3px; 
+    }
+    #search:focus{
+        outline: none;
+    }
+    .search{
+        border: 1px solid grey;
+        border-radius: 0 3px 3px 0;
+        border-left: none;
+        height: 28px;
+        top: 1px;
+    }
+    .lbl{
+        left: 195px;
+        top: 0;
+        padding: 0 4px;
+        font-size: 15px;
+        transition: 0.5s ease;
+    }
+    #tick{
+        margin: 0 10px;
+    }
+}
+.menuBody{
+    margin: 0 48px 0 0;
+    border: 1px solid lightgrey;
+    .GRID{
+        display: grid;
+        grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+        row-gap: 20px;
+    }
+    .menuItem{
+        img{
+            width: 100%;
+            border: 1px solid lightgrey;
+            border-bottom: none;
+        }
+        .title{
+            border: 1px solid lightgrey;
+        }
+        
+    }
+}
+.BTN{
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.BTN:hover{
+    background-color: red;
+    color: white;
+}
+.footer{
+    i{
+        transition: 0.3s ease;
+    }
+    i:hover{
+        transform: scale(1.1);
+    }
+}
+
+.stick{
+    display: none !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    bottom: 0;
+}
+.cart2{
+    display: none !important;
+}
+.signup{
+    width: 500px;
+}
+.infobody{
+    margin: 0 48px;
+    position: relative;
+    top: 3px;
+    z-index: -1;
+}
+@media screen and (max-width:1200px) {
+    .GRID{
+        grid-template-columns: calc(100% / 2) calc(100% / 2) !important;
+    }
+}
+@media screen and (max-width:1000px) {
+    .body{
+        display: block !important;
+    }
+    .shop{
+        width: 100% !important;
+    }
+    .navmenu, .filter, .menuBody{
+        margin-inline: 0 !important;
+    }
+    .Dbtn{
+        padding-inline: 0 !important;
+    }
+    .cart{
+        display: none;
+    }
+    .stick{
+        display: flex !important;
+    }
+    .cart2{
+        display: block !important;
+    }
+    
+}
+@media screen and (min-width:650px) {
+    .navbtn::-webkit-scrollbar{
+        width: 0;
+    }
+    
+}
+@media screen and (max-width:650px) {
+    .GRID{
+        grid-template-columns: auto !important;
+    }
+    .scrollbtn{
+        display: none;
+    }
+    .navbtn{
+        width: 100% !important;
+    }
+}
